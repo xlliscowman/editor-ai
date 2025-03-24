@@ -112,9 +112,12 @@ const nodeStyle = $computed(() => {
   }
 })
 
-const fileIcon = $computed(() => {
-  return `${options.value.cdnUrl}/icons/file/${getFileIcon(node.attrs.name)}.svg`
-})
+// const fileIcon = $computed(() => {
+//   return `${options.value.cdnUrl}/icons/file/${getFileIcon(node.attrs.name)}.svg`
+// })
+// 使用 $ref 声明 fileIcon，并赋予初始值
+let fileIcon = $ref(`${options.value.cdnUrl}/icons/file/${getFileIcon(node.attrs.name)}.svg`)
+
 
 let previewModal = $ref(false)
 let previewURL = $ref(null)
