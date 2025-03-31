@@ -31,7 +31,6 @@ const options = $ref({
   toolbar: {
     // defaultMode: 'classic',
     // menus: ['base'],
-    enableSourceEditor: true,
   },
   document: {
     title: '测试文档',
@@ -101,7 +100,7 @@ const options = $ref({
   onFileDelete(id: string, url: string) {
     console.log(id, url)
   },
-  onCustomizeChartSettings(data: any, config: any) {
+  onCustomEChartSettings(data: any, config: any) {
     return null
   },
   async onAssistant() {
@@ -116,6 +115,11 @@ const options = $ref({
 </script>
 
 <style>
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
 .examples {
   margin: 20px;
   display: flex;
